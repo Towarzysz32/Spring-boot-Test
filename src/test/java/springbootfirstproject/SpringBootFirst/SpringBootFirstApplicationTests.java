@@ -88,6 +88,12 @@ class SpringBootFirstApplicationTests {
 
 	// CarApi
 	@Test
+	public void CarApiContstuct(){
+		CarApi carapi = new CarApi();
+		Assertions.assertNotNull(carapi);
+	}
+
+	@Test
 	public void helloSayHello(){
 	CarApi carapi = new CarApi();
 		Assertions.assertEquals(carapi.hello(),"hello","funkcja hello dziala poprawnie");
@@ -99,10 +105,7 @@ class SpringBootFirstApplicationTests {
 		Mockito.when(mock.getCarList()).thenReturn(Arrays.asList(new Car("Ford","Mustang")));
 
 		List<Car> carList =  mock.getCarList();
-		CarApi carapi = new CarApi();
 		Car car = new Car("Ford","Mustang");
-
-
 		Assertions.assertEquals(carList.get(0),car);
 	}
 }

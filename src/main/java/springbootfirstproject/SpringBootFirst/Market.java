@@ -28,11 +28,4 @@ public class Market {
     public boolean addCar(Car car){
         return carList.add(car);
     }
-
-    @Override
-    public String toString() {
-        return "Market{" +
-                "carList=" + carList +
-                '}';
-    }
 }

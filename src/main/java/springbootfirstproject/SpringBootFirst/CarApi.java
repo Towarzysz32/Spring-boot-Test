@@ -8,22 +8,26 @@ import java.util.List;
 @RestController
 public class CarApi {
 
-    public CarApi() { }
-
-    @GetMapping("/hello")
-    public String hello(){
-        return "hello";
-    }
-
   // @Autowired
     private Market market;
-
 
     public CarApi(Market market) {
         this.market = market;
     }
 
+    public CarApi() { }
 
+    @Override
+    public String toString() {
+        return "CarApi{" +
+                "market=" + market +
+                '}';
+    }
+
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello";
+    }
 
      @GetMapping("/getCar")
     public List<Car> getCars(){
