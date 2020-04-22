@@ -15,7 +15,7 @@ public class CarApi {
         return "hello";
     }
 
-   @Autowired
+  // @Autowired
     private Market market;
 
 

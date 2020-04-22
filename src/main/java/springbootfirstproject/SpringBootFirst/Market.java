@@ -10,7 +10,6 @@ import java.util.List;
 @Service
 public class Market {
 
-
     private List<Car> carList;
 
     public List<Car> getCarList() {
@@ -30,4 +29,10 @@ public class Market {
         return carList.add(car);
     }
 
+    @Override
+    public String toString() {
+        return "Market{" +
+                "carList=" + carList +
+                '}';
+    }
 }
